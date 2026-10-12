@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" data-theme="minimal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nick Kotani</title>
+  <meta name="description" content="Nick Kotani — builder of The Box Score. Fishing, crabbing, and Muni.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=DM+Serif+Display&family=Oswald:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Bungee&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+/* ---------- Theme tokens ---------- */
+:root,
+[data-theme="minimal"] {
+  --bg: #ffffff; --surface: #f6f6f4; --text: #161616; --muted: #5f5f5f;
+  --accent: #1f5eff; --accent-text: #ffffff; --border: #e3e3e0;
+  --font-head: "Inter", system-ui, sans-serif; --font-body: "Inter", system-ui, sans-serif;
+  --font-num: "Inter", system-ui, sans-serif;
+  --radius: 10px; --head-weight: 700; --head-case: none; --head-spacing: -0.02em;
+  --hero-bg: var(--bg); --wave: transparent; --shadow: none;
+}
+@media (prefers-color-scheme: dark) {
+  [data-theme="minimal"] {
+    --bg: #111112; --surface: #1b1b1d; --text: #ededed; --muted: #a3a3a3;
+    --accent: #7aa2ff; --accent-text: #0b0b0c; --border: #2a2a2d;
+  }
+}
+
+[data-theme="bay"] {
+  --bg: #f4f7f8; --surface: #ffffff; --text: #0e2a38; --muted: #4f6b78;
+  --accent: #0b6e8a; --accent-text: #ffffff; --border: #d4e1e6;
+  --font-head: "DM Serif Display", Georgia, serif; --font-body: "Inter", system-ui, sans-serif;
+  --font-num: "DM Serif Display", Georgia, serif;
+  --radius: 16px; --head-weight: 400; --head-case: none; --head-spacing: 0;
+  --hero-bg: linear-gradient(180deg, #cfdfe5 0%, #9fc3d0 100%); --wave: #f4f7f8;
+  --shadow: 0 8px 24px rgba(14, 42, 56, 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  [data-theme="bay"] {
+    --bg: #0a1b24; --surface: #10293a; --text: #e3eef2; --muted: #9ab4bf;
+    --accent: #5ec4d9; --accent-text: #06141b; --border: #1d3d50;
+    --hero-bg: linear-gradient(180deg, #24414f 0%, #0f2b3a 100%); --wave: #0a1b24;
+    --shadow: none;
+  }
+}
+
+[data-theme="scoreboard"] {
+  --bg: #0b0d10; --surface: #14181d; --text: #f2f2f2; --muted: #9aa3ad;
+  --accent: #ffb300; --accent-text: #0b0d10; --border: #262c33;
+  --font-head: "Oswald", Impact, sans-serif; --font-body: "Inter", system-ui, sans-serif;
+  --font-num: "JetBrains Mono", ui-monospace, monospace;
+  --radius: 4px; --head-weight: 700; --head-case: uppercase; --head-spacing: 0.02em;
+  --hero-bg: repeating-linear-gradient(90deg, #0b0d10 0 79px, #161a20 79px 80px); --wave: transparent;
+  --shadow: none;
+}
+
+[data-theme="retro"] {
+  --bg: #fbf3e4; --surface: #fffaf0; --text: #2b1d14; --muted: #6d5646;
+  --accent: #c8102e; --accent-text: #fffaf0; --border: #2b1d14;
+  --font-head: "Bungee", Impact, sans-serif; --font-body: "Rubik", system-ui, sans-serif;
+  --font-num: "Bungee", Impact, sans-serif;
+  --radius: 0; --head-weight: 400; --head-case: none; --head-spacing: 0;
+  --hero-bg: #f2b33d; --wave: #fbf3e4;
+  --shadow: 5px 5px 0 #2b1d14;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 400 1.0625rem/1.6 var(--font-body);
+  transition: background-color .25s, color .25s;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+h1, h2, h3, h4 {
+  font-family: var(--font-head); font-weight: var(--head-weight);
+  text-transform: var(--head-case); letter-spacing: var(--head-spacing);
+  line-height: 1.15; margin: 0 0 .5em;
+}
+h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin-top: 2.5em; }
+h3 { font-size: 1.6rem; }
+h3 a, h4 a { color: inherit; }
+h4 { font-size: 1.1rem; }
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 16px; top: 16px; background: var(--surface); padding: 8px; z-index: 10; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- Style switcher ---------- */
+.switcher {
+  position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 6px;
+  align-items: center; justify-content: center; padding: 8px 16px;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  font: 500 .85rem/1 var(--font-body);
+}
+.switcher-label { color: var(--muted); margin-right: 4px; }
+.switcher button {
+  font: inherit; cursor: pointer; padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--border); background: transparent; color: var(--text);
+}
+.switcher .next { border-style: dashed; }
+.switcher button[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--hero-bg); position: relative; padding: 72px 0 88px; }
+.eyebrow { margin: 0; color: var(--muted); font-weight: 500; }
+[data-theme="retro"] .eyebrow, [data-theme="bay"] .eyebrow { color: var(--text); }
+.hero h1 { font-size: clamp(2.8rem, 10vw, 5.5rem); margin: .1em 0 .25em; }
+[data-theme="scoreboard"] .hero h1 { color: var(--accent); }
+[data-theme="retro"] .hero h1 { text-shadow: 4px 4px 0 var(--accent); color: #fffaf0; -webkit-text-stroke: 2px var(--text); }
+.lede { font-size: 1.25rem; max-width: 36em; margin: 0 0 1.5em; }
+.links, .project-links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.wave { position: absolute; bottom: -1px; left: 0; width: 100%; height: 40px; fill: var(--wave); }
+
+.btn {
+  display: inline-block; padding: 10px 18px; border-radius: var(--radius);
+  border: 2px solid var(--accent); color: var(--accent); background: var(--surface);
+  text-decoration: none; font-weight: 600; box-shadow: var(--shadow);
+}
+.btn.primary { background: var(--accent); color: var(--accent-text); }
+.btn:hover { filter: brightness(1.08); }
+[data-theme="retro"] .btn { border-color: var(--text); }
+
+/* ---------- Project ---------- */
+.project {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: clamp(20px, 4vw, 36px); box-shadow: var(--shadow);
+}
+[data-theme="retro"] .project { border-width: 3px; }
+.project-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
+.tag { margin: 0; font-size: .85rem; color: var(--muted); }
+.project-sum { font-size: 1.15rem; max-width: 40em; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 28px 0; }
+.stat { border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; background: var(--bg); }
+[data-theme="scoreboard"] .stat { border-top: 3px solid var(--accent); }
+.stat-num { display: block; font: 700 2.2rem/1.1 var(--font-num); color: var(--accent); }
+[data-theme="bay"] .stat-num, [data-theme="retro"] .stat-num { font-weight: 400; }
+.stat-label { font-size: .85rem; color: var(--muted); }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-bottom: 28px; }
+.features ul { padding-left: 1.1em; margin: 0; color: var(--muted); }
+.features li { margin-bottom: .35em; }
+
+/* ---------- About ---------- */
+.interests { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.interests li {
+  display: grid; gap: 4px; padding: 20px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.interests .icon { font-size: 2rem; }
+.interests strong { font-family: var(--font-head); font-weight: var(--head-weight); text-transform: var(--head-case); font-size: 1.2rem; }
+.interests span:last-child { color: var(--muted); }
+
+footer.wrap { margin-top: 64px; padding-top: 24px; padding-bottom: 40px; border-top: 1px solid var(--border); color: var(--muted); }
+footer p { margin: .25em 0; }
+.small { font-size: .85rem; }
+
+@media (prefers-reduced-motion: reduce) { body { transition: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="switcher" aria-label="Site style">
+    <span class="switcher-label">Style:</span>
+    <button type="button" data-set-theme="minimal">Minimal</button>
+    <button type="button" data-set-theme="bay">SF Bay</button>
+    <button type="button" data-set-theme="scoreboard">Scoreboard</button>
+    <button type="button" data-set-theme="retro">Retro</button>
+    <button type="button" id="next-theme" class="next" title="Next style (S)">Next ↻</button>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Nick Kotani</h1>
+      <p class="lede">I built <a href="https://the-box-score.com/">The Box Score</a>, a fantasy football and sports analytics site with an SF Bay fishing planner on the side.</p>
+      <ul class="links">
+        <li><a class="btn primary" href="#projects">See the project</a></li>
+        <li><a class="btn" href="https://www.linkedin.com/in/nicholas-kotani/" rel="me">LinkedIn</a></li>
+      </ul>
+    </div>
+    <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 30 Q 150 0 300 30 T 600 30 T 900 30 T 1200 30 V60 H0 Z"/>
+    </svg>
+  </header>
+
+  <main id="main">
+    <section id="projects" class="wrap">
+      <h2>Project</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <h3><a href="https://the-box-score.com/">The Box Score</a></h3>
+          <p class="tag">Built by me, front to back</p>
+        </div>
+        <p class="project-sum">Fantasy football tools that re-score everything for <em>your</em> league, betting models that are graded in public, and a tide-driven fishing planner for the Bay.</p>
+
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><span class="stat-num">4</span><span class="stat-label">leagues synced<br>ESPN · Sleeper · Yahoo · CBS</span></div>
+          <div class="stat" role="listitem"><span class="stat-num">+3.6%</span><span class="stat-label">ROI on selective NFL moneylines<br>(walk-forward backtest, net of vig)</span></div>
+          <div class="stat" role="listitem"><span class="stat-num">14</span><span class="stat-label">day tide &amp; bite-window<br>outlook from NOAA</span></div>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <h4>Fantasy</h4>
+            <ul>
+              <li>Daily draft board and rankings adjusted to your scoring and roster</li>
+              <li>Trade calculator that looks for deals good for both sides</li>
+              <li>Manager grades, rookie info, and articles</li>
+            </ul>
+          </div>
+          <div class="feature">
+            <h4>Betting edges</h4>
+            <ul>
+              <li>Model picks with a public track record</li>
+              <li>World Cup and UFC talent boards</li>
+              <li>NBA, MLB, college football, and cards coming in 2027</li>
+            </ul>
+          </div>
+          <div class="feature">
+            <h4><a href="https://the-box-score.com/fishing">SF Bay fishing planner</a></h4>
+            <ul>
+              <li>Bite windows from live Golden Gate tide predictions</li>
+              <li>Spot guides: Torpedo Wharf, Pacifica Pier, Alameda Rockwall, and more</li>
+              <li>Monthly species guide with rod, reel, rig, and bait</li>
+              <li>Interactive bay map</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="project-links">
+          <a class="btn primary" href="https://the-box-score.com/">Visit The Box Score</a>
+          <a class="btn" href="https://the-box-score.com/fishing">Open the fishing planner</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="about" class="wrap">
+      <h2>Off the clock</h2>
+      <ul class="interests">
+        <li><span class="icon" aria-hidden="true">🦀</span><strong>Crabbing</strong><span>Dropping pots off the pier and hoping for keepers.</span></li>
+        <li><span class="icon" aria-hidden="true">🎣</span><strong>Fishing</strong><span>The reason the fishing planner exists.</span></li>
+        <li><span class="icon" aria-hidden="true">🚋</span><strong>Muni</strong><span>Streetcars, buses, and the best way to get around the city.</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p><a href="https://www.linkedin.com/in/nicholas-kotani/" rel="me">LinkedIn</a> · <a href="https://the-box-score.com/">The Box Score</a></p>
+    <p class="small">© <span id="year">2026</span> Nick Kotani</p>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var themes = ["minimal", "bay", "scoreboard", "retro"];
+      function apply(t) {
+        if (themes.indexOf(t) === -1) t = "minimal";
+        root.setAttribute("data-theme", t);
+        document.querySelectorAll("[data-set-theme]").forEach(function (b) {
+          b.setAttribute("aria-pressed", String(b.dataset.setTheme === t));
+        });
+        try { localStorage.setItem("theme", t); } catch (e) {}
+      }
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      apply(saved || "minimal");
+      document.querySelectorAll("[data-set-theme]").forEach(function (b) {
+        b.addEventListener("click", function () { apply(b.dataset.setTheme); });
+      });
+      function next() {
+        var i = themes.indexOf(root.getAttribute("data-theme"));
+        apply(themes[(i + 1) % themes.length]);
+      }
+      document.getElementById("next-theme").addEventListener("click", next);
+      document.addEventListener("keydown", function (e) {
+        if ((e.key === "s" || e.key === "S") && !e.metaKey && !e.ctrlKey && !e.altKey) next();
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
