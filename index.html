@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" data-theme="minimal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nick Kotani</title>
+  <meta name="description" content="Nick Kotani — builder of The Box Score. Fishing, crabbing, and Muni.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=DM+Serif+Display&family=Oswald:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Bungee&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <nav class="switcher" aria-label="Site style">
+    <span class="switcher-label">Style:</span>
+    <button type="button" data-set-theme="minimal">Minimal</button>
+    <button type="button" data-set-theme="bay">SF Bay</button>
+    <button type="button" data-set-theme="scoreboard">Scoreboard</button>
+    <button type="button" data-set-theme="retro">Retro</button>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Hi, I'm</p>
+      <h1>Nick Kotani</h1>
+      <p class="lede">I built <a href="https://the-box-score.com/">The Box Score</a>, a fantasy football and sports analytics site with an SF Bay fishing planner on the side.</p>
+      <ul class="links">
+        <li><a class="btn primary" href="#projects">See the project</a></li>
+        <li><a class="btn" href="https://www.linkedin.com/in/nicholas-kotani/" rel="me">LinkedIn</a></li>
+      </ul>
+    </div>
+    <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 30 Q 150 0 300 30 T 600 30 T 900 30 T 1200 30 V60 H0 Z"/>
+    </svg>
+  </header>
+
+  <main id="main">
+    <section id="projects" class="wrap">
+      <h2>Project</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <h3><a href="https://the-box-score.com/">The Box Score</a></h3>
+          <p class="tag">Built by me, front to back</p>
+        </div>
+        <p class="project-sum">Fantasy football tools that re-score everything for <em>your</em> league, betting models that are graded in public, and a tide-driven fishing planner for the Bay.</p>
+
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><span class="stat-num">4</span><span class="stat-label">leagues synced<br>ESPN · Sleeper · Yahoo · CBS</span></div>
+          <div class="stat" role="listitem"><span class="stat-num">+3.6%</span><span class="stat-label">ROI on selective NFL moneylines<br>(walk-forward backtest, net of vig)</span></div>
+          <div class="stat" role="listitem"><span class="stat-num">14</span><span class="stat-label">day tide &amp; bite-window<br>outlook from NOAA</span></div>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <h4>Fantasy</h4>
+            <ul>
+              <li>Daily draft board and rankings adjusted to your scoring and roster</li>
+              <li>Trade calculator that looks for deals good for both sides</li>
+              <li>Manager grades, rookie info, and articles</li>
+            </ul>
+          </div>
+          <div class="feature">
+            <h4>Betting edges</h4>
+            <ul>
+              <li>Model picks with a public track record</li>
+              <li>World Cup and UFC talent boards</li>
+              <li>NBA, MLB, college football, and cards coming in 2027</li>
+            </ul>
+          </div>
+          <div class="feature">
+            <h4><a href="https://the-box-score.com/fishing">SF Bay fishing planner</a></h4>
+            <ul>
+              <li>Bite windows from live Golden Gate tide predictions</li>
+              <li>Spot guides: Torpedo Wharf, Pacifica Pier, Alameda Rockwall, and more</li>
+              <li>Monthly species guide with rod, reel, rig, and bait</li>
+              <li>Interactive bay map</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="project-links">
+          <a class="btn primary" href="https://the-box-score.com/">Visit The Box Score</a>
+          <a class="btn" href="https://the-box-score.com/fishing">Open the fishing planner</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="about" class="wrap">
+      <h2>Off the clock</h2>
+      <ul class="interests">
+        <li><span class="icon" aria-hidden="true">🦀</span><strong>Crabbing</strong><span>Dropping pots off the pier and hoping for keepers.</span></li>
+        <li><span class="icon" aria-hidden="true">🎣</span><strong>Fishing</strong><span>The reason the fishing planner exists.</span></li>
+        <li><span class="icon" aria-hidden="true">🚋</span><strong>Muni</strong><span>Streetcars, buses, and the best way to get around the city.</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p><a href="https://www.linkedin.com/in/nicholas-kotani/" rel="me">LinkedIn</a> · <a href="https://the-box-score.com/">The Box Score</a></p>
+    <p class="small">© <span id="year">2026</span> Nick Kotani</p>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var themes = ["minimal", "bay", "scoreboard", "retro"];
+      function apply(t) {
+        if (themes.indexOf(t) === -1) t = "minimal";
+        root.setAttribute("data-theme", t);
+        document.querySelectorAll("[data-set-theme]").forEach(function (b) {
+          b.setAttribute("aria-pressed", String(b.dataset.setTheme === t));
+        });
+        try { localStorage.setItem("theme", t); } catch (e) {}
+      }
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      apply(saved || "minimal");
+      document.querySelectorAll("[data-set-theme]").forEach(function (b) {
+        b.addEventListener("click", function () { apply(b.dataset.setTheme); });
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
