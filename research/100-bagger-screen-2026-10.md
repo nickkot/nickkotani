@@ -32,8 +32,8 @@ I screened about 35 names: 6 AI, 7 health/fitness, 7 experiences, 8 outdoors, an
 | 1 | **DSP** Viant | AI-driven CTV ad-buying platform | $790M (9/18) ✅ | 15.8% ⚠️ | +34% (Q2'26) ✅ | 45.8% ✅ | 71.5% incl. Class B ✅ | 0.0 ✅ | ⚠️ Tim Vanderhook (founder status unverified) | **45** |
 | 2 | **PAYS** Paysign | Prepaid cards: plasma payouts & pharma copay | $728–779M (8/28) ✅ | 27.7% ✅ | +48% (Q2'26) ✅ | 63.3% ✅ | ≈16.5% CEO alone ✅ | ≈0.23 ✅ | ⚠️ Mark Newcomer (unverified) | **43** |
 | 3 | **RDVT** Red Violet | Identity & data-fusion analytics | $1.20B (9/9) ✅ | 21.2% ✅ | +23% (Q2'26) ✅ | ~76% ✅ | 8.9% vs 23.7% ⚠️ | ≈0 ✅ | ✅ Derek Dubner | **41** |
-| 4 | **OMDA** Omada | Virtual chronic-care & GLP-1 companion | $1.31B (9/22) ✅ | 45.5% (2-yr only) ⚠️ | +43% (Q2'26) ✅ | 66–73% ✅ | <1% CEO ❌ | 0.0 ✅ | ❌ Sean Duffy steps down 1/1/27 | **41** |
-| 5 | **CSTL** Castle Bio | Skin & GI cancer risk tests | $1.02B (9/1) ✅ | 40.6% ✅ | +20% (Q2'26) ✅ | 69–75% ✅ | 2–6.5% ❌ | ≈0.02 ✅ | ⚠️ Derek Maetzold (unverified) | **41** |
+| 4 | **CSTL** Castle Bio | Skin & GI cancer risk tests | $1.02B (9/1) ✅ | 40.6% ✅ | +20% (Q2'26) ✅ | 69–75% ✅ | 2–6.5% ❌ | ≈0.02 ✅ | ⚠️ Derek Maetzold (unverified) | **41** |
+| 5 | **OMDA** Omada | Virtual chronic-care & GLP-1 companion | $1.31B (9/22) ✅ | 45.5% (2-yr only) ⚠️ | +43% (Q2'26) ✅ | 66–73% ✅ | <1% CEO ❌ | 0.0 ✅ | ❌ Sean Duffy steps down 1/1/27 | **41** |
 | 6 | **KARO** Karooooo | Fleet telematics subscriptions | $1.97–2.07B (Aug–Sep) ⚠️ | 19.1% (ZAR) ✅ | +22% (Q1 FY27) ✅ | 73% (subscription) ⚠️ | 74% ✅ | unverified ⚠️ | ✅ Zak Calisto | **39** |
 | 7 | **AMPL** Amplitude | Product analytics + AI agents | $1.91B (10/8) ⚠️ | 27.3% ✅ | +21% (part acquired) ⚠️ | 74% ✅ | ~7–8% ❌ | ≈0 ✅ | ⚠️ Spenser Skates (unverified) | **37** |
 | 8 | **ODD** Oddity | Online beauty/wellness brands (AI matching) | ~$0.75–1.1B (Aug–Sep) ✅ | 48.9% ✅ | −25% (Q2'26) ❌ | 69–73% ✅ | ~24% econ. ✅ | ≈2.0x gross ❌ | ✅ Oran Holtzman | **37** |
@@ -136,30 +136,7 @@ Scores on criteria 5 and 6 are judgment calls. Scores on criteria 1–4 follow m
 
 ---
 
-### #4 Omada Health (OMDA): Total 41/60 (**fails the founder/insider test**)
-**What it does:** Virtual programs for chronic conditions (diabetes, hypertension, MSK, GLP-1 companion care), sold through employers and health plans.
-
-| Metric | Value | Source / date |
-|---|---|---|
-| Market cap | ~$1.31B ($21.37 × ~61.2M shares) | [Google Finance](https://www.google.com/finance/beta/quote/OMDA:NASDAQ), 2026-09-22 |
-| Revenue | FY23 $122.8M → FY25 $260M; **2-yr CAGR 45.5%**. Five-year history not available (IPO June 2025). | [MobiHealthNews/S-1](https://www.mobihealthnews.com/news/omada-health-files-go-public); [Barchart](https://www.barchart.com/story/news/593430/omada-health-reports-fourth-quarter-and-full-year-2025-results), 2026-03-05 |
-| Latest YoY | **+43%** (Q2'26: $88M vs $61M); GAAP net income $5M; FY26 guidance $334–340M | [MarketBeat](https://www.marketbeat.com/instant-alerts/omada-health-q2-earnings-call-highlights-2026-08-07/), [IR](https://investors.omadahealth.com/static-files/524d70b5-be2d-4223-b98a-43f666b24028) |
-| Gross margin | 66% GAAP FY25; 73% in Q2'26 | Barchart; MarketBeat |
-| Insider ownership | Aggregate **unverified**. CEO Duffy holds 411,861 shares ≈ 0.7% plus options. VC holders (a16z 5.5%, Divisadero 6.3%) are not insiders. | [InsiderTrades](https://www.insidertrades.com/alerts/nasdaq-omda-insider-buying-and-selling-2026-09-04/); [13G/A](https://www.sec.gov/Archives/edgar/data/0001611115/000091957426005548/primary_doc.xml) |
-| Debt / equity | $0 / ~$234M at 2026-03-31 = **0.0**; $222M cash | [Fintel](https://fintel.io/bs/us/omda) |
-| Founder-led? | **Not for long.** Co-founder Sean Duffy is CEO until 2026-12-31. Wei-Li Shao becomes CEO on 2027-01-01, and Duffy moves to executive chair. | [biopharmawatch](https://www.biopharmawatch.com/news/OMDA/omada-health-q2-2026-results-ceo-transition) |
-
-- **Bull:** This is the best fit to your health/fitness theme with real numbers behind it: 40%+ growth, GAAP profit just reached, no debt, about 1.1M members, at roughly 4x FY26 sales guidance. Chronic metabolic disease is one of the largest cost pools in US healthcare. If Omada becomes the standard behavior-change layer around GLP-1 drugs, a 20x revenue increase is plausible.
-- **Bear / path to zero:** Payers and employers decide whether Omada gets paid. If GLP-1 makers, PBMs or health plans bundle their own lifestyle programs, Omada becomes a feature rather than a company, and contracts roll off. The founder is stepping back right as that fight starts, and insiders own almost nothing.
-- **Fails:** Criterion 3 (founder leaving, insiders < 10%). Criterion 2 can't be fully tested because there are only about 3 years of public history.
-
-| Cap | Growth | Founder/insider | GM/debt | TAM | Valuation | **Total** |
-|---|---|---|---|---|---|---|
-| 6 | 8 | 2 | 9 | 8 | 8 | **41** |
-
----
-
-### #5 Castle Biosciences (CSTL): Total 41/60 (**fails the insider test**)
+### #4 Castle Biosciences (CSTL): Total 41/60 (**fails the insider test**)
 **What it does:** Molecular diagnostic tests that tell dermatologists and gastroenterologists how risky a melanoma or Barrett's esophagus case is (DecisionDx, TissueCypher).
 
 | Metric | Value | Source / date |
@@ -179,6 +156,29 @@ Scores on criteria 5 and 6 are judgment calls. Scores on criteria 1–4 follow m
 | Cap | Growth | Founder/insider | GM/debt | TAM | Valuation | **Total** |
 |---|---|---|---|---|---|---|
 | 6 | 8 | 4 | 9 | 6 | 8 | **41** |
+
+---
+
+### #5 Omada Health (OMDA): Total 41/60 (**fails the founder/insider test**)
+**What it does:** Virtual programs for chronic conditions (diabetes, hypertension, MSK, GLP-1 companion care), sold through employers and health plans.
+
+| Metric | Value | Source / date |
+|---|---|---|
+| Market cap | ~$1.31B ($21.37 × ~61.2M shares) | [Google Finance](https://www.google.com/finance/beta/quote/OMDA:NASDAQ), 2026-09-22 |
+| Revenue | FY23 $122.8M → FY25 $260M; **2-yr CAGR 45.5%**. Five-year history not available (IPO June 2025). | [MobiHealthNews/S-1](https://www.mobihealthnews.com/news/omada-health-files-go-public); [Barchart](https://www.barchart.com/story/news/593430/omada-health-reports-fourth-quarter-and-full-year-2025-results), 2026-03-05 |
+| Latest YoY | **+43%** (Q2'26: $88M vs $61M); GAAP net income $5M; FY26 guidance $334–340M | [MarketBeat](https://www.marketbeat.com/instant-alerts/omada-health-q2-earnings-call-highlights-2026-08-07/), [IR](https://investors.omadahealth.com/static-files/524d70b5-be2d-4223-b98a-43f666b24028) |
+| Gross margin | 66% GAAP FY25; 73% in Q2'26 | Barchart; MarketBeat |
+| Insider ownership | Aggregate **unverified**. CEO Duffy holds 411,861 shares ≈ 0.7% plus options. VC holders (a16z 5.5%, Divisadero 6.3%) are not insiders. | [InsiderTrades](https://www.insidertrades.com/alerts/nasdaq-omda-insider-buying-and-selling-2026-09-04/); [13G/A](https://www.sec.gov/Archives/edgar/data/0001611115/000091957426005548/primary_doc.xml) |
+| Debt / equity | $0 / ~$234M at 2026-03-31 = **0.0**; $222M cash | [Fintel](https://fintel.io/bs/us/omda) |
+| Founder-led? | **Not for long.** Co-founder Sean Duffy is CEO until 2026-12-31. Wei-Li Shao becomes CEO on 2027-01-01, and Duffy moves to executive chair. | [biopharmawatch](https://www.biopharmawatch.com/news/OMDA/omada-health-q2-2026-results-ceo-transition) |
+
+- **Bull:** This is the best fit to your health/fitness theme with real numbers behind it: 40%+ growth, GAAP profit just reached, no debt, about 1.1M members, at roughly 4x FY26 sales guidance. Chronic metabolic disease is one of the largest cost pools in US healthcare. If Omada becomes the standard behavior-change layer around GLP-1 drugs, a 20x revenue increase is plausible.
+- **Bear / path to zero:** Payers and employers decide whether Omada gets paid. If GLP-1 makers, PBMs or health plans bundle their own lifestyle programs, Omada becomes a feature rather than a company, and contracts roll off. The founder is stepping back right as that fight starts, and insiders own almost nothing.
+- **Fails:** Criterion 3 (founder leaving, insiders < 10%). Criterion 2 can't be fully tested because there are only about 3 years of public history.
+
+| Cap | Growth | Founder/insider | GM/debt | TAM | Valuation | **Total** |
+|---|---|---|---|---|---|---|
+| 6 | 8 | 2 | 9 | 8 | 8 | **41** |
 
 ---
 
@@ -304,15 +304,15 @@ Scores on criteria 5 and 6 are judgment calls. Scores on criteria 1–4 follow m
 | 1 | **DSP** | AI / ads | 8 | 7 | 8 | 7 | 7 | 8 | **45** | Founder status unverified; 5-yr CAGR 15.8% is borderline |
 | 2 | **PAYS** | Health-adjacent fintech | 8 | 9 | 6 | 8 | 5 | 7 | **43** | Founder status and total insider % unverified |
 | 3 | **RDVT** | AI / data | 6 | 8 | 6 | 10 | 6 | 5 | **41** | Insider % conflict (8.9% vs 23.7%) |
-| 4 | **OMDA** | Health & fitness | 6 | 8 | 2 | 9 | 8 | 8 | **41** | **FAILS #3** (founder leaving; insiders < 1%); only 3-yr history |
-| 5 | **CSTL** | Health (diagnostics) | 6 | 8 | 4 | 9 | 6 | 8 | **41** | **FAILS #3** (insiders 2–6%) |
+| 4 | **CSTL** | Health (diagnostics) | 6 | 8 | 4 | 9 | 6 | 8 | **41** | **FAILS #3** (insiders 2–6%) |
+| 5 | **OMDA** | Health & fitness | 6 | 8 | 2 | 9 | 8 | 8 | **41** | **FAILS #3** (founder leaving; insiders < 1%); only 3-yr history |
 | 6 | **KARO** | Not in your themes (fleet SaaS) | 3 | 7 | 10 | 7 | 6 | 6 | **39** | **Borderline #1** ($1.97–2.07B); debt and total GM unverified |
 | 7 | **AMPL** | AI / software | 4 | 7 | 5 | 9 | 6 | 6 | **37** | **FAILS #3** (insiders ~7–8%) |
 | 8 | **ODD** | Health / beauty | 7 | 3 | 9 | 5 | 6 | 7 | **37** | **FAILS #2** (−25% YoY) and **#4** (D/E ~2x gross) |
 | 9 | **INOD** | AI | 4 | 10 | 3 | 6 | 7 | 6 | **36** | **FAILS #3** (not founder-led); **narrowly fails #4** (GM 39.5%) |
 | 10 | **KRUS** | Experiences | 8 | 6 | 3 | 3 | 4 | 6 | **30** | **FAILS #3, #4**; weak on #5 |
 
-Ties at 41 are broken by how many hard criteria the company passes.
+Ties at 41 are broken by how many hard criteria the company passes (RDVT 3.5, CSTL 3, OMDA 2.5).
 
 **How sensitive is the ranking?** If you weight the hard tests (criteria 1–4) double and the judgment tests (5–6) single, the order is DSP 75, PAYS 74, RDVT 71, CSTL 68, KARO 66, OMDA 66, AMPL 62, ODD 61, INOD 59, KRUS 50. The top three don't change, and Karooooo moves above Omada.
 
@@ -343,7 +343,7 @@ Ties at 41 are broken by how many hard criteria the company passes.
 
 1. **Viant (DSP).** *Can Viant hold a gross margin of 45% or more while growing CTV share, as Amazon DSP and The Trade Desk compete on fees?* Check gross margin and take rate over the last 8 quarters in the 10-Qs. If margin falls while revenue grows, Viant is buying growth and the thesis weakens.
 2. **Paysign (PAYS).** *What share of revenue comes from the largest plasma customers and the largest pharma copay programs, and when do those contracts renew?* The 10-K's customer-concentration note and the issuing-bank agreement answer this. While you're there, confirm Newcomer's founder status and the total insider stake from the proxy.
-3. **Omada Health (OMDA).** It fails the founder test, but it is the best match for your health/fitness theme. *Are employer and health-plan clients keeping and expanding Omada as GLP-1 use spreads, or replacing it with programs bundled by PBMs or drugmakers?* Look for net revenue retention, member growth per contract, and churn on the earnings calls. That one number tells you whether Omada complements GLP-1 drugs or gets replaced by them.
+3. **Omada Health (OMDA, #5).** It fails the founder test, but it is the best match for your health/fitness theme. *Are employer and health-plan clients keeping and expanding Omada as GLP-1 use spreads, or replacing it with programs bundled by PBMs or drugmakers?* Look for net revenue retention, member growth per contract, and churn on the earnings calls. That one number tells you whether Omada complements GLP-1 drugs or gets replaced by them.
 
 Runner-up: **Red Violet (RDVT)** has the cleanest fundamentals but the richest valuation (about 11–12x sales). Its question: *does the $100M raise go into acquisitions that keep EBITDA margins above 40%?*
 
