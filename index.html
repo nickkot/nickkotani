@@ -153,6 +153,39 @@ h4 { font-size: 1.1rem; }
 .interests strong { font-family: var(--font-head); font-weight: var(--head-weight); text-transform: var(--head-case); font-size: 1.2rem; }
 .interests span:last-child { color: var(--muted); }
 
+/* ---------- Tabs ---------- */
+.tabs {
+  display: flex; gap: 4px; justify-content: center; padding: 0 16px;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+}
+.tabs a {
+  padding: 12px 16px; text-decoration: none; color: var(--muted); font-weight: 600;
+  border-bottom: 3px solid transparent; margin-bottom: -1px;
+}
+.tabs a[aria-current="page"] { color: var(--text); border-bottom-color: var(--accent); }
+[hidden] { display: none !important; }
+
+/* ---------- Research ---------- */
+.research-head { padding-top: 40px; }
+.wrap.wide { max-width: 1240px; }
+.top10 td:nth-child(3) { min-width: 180px; }
+.research-head h1 { font-size: clamp(2rem, 6vw, 3.2rem); margin: .1em 0 .3em; }
+.callout {
+  background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+  border-radius: var(--radius); padding: 16px 20px; margin: 24px 0; font-size: .95rem;
+}
+.callout p { margin: .4em 0; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.table-scroll table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+.table-scroll th, .table-scroll td { padding: 8px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+.table-scroll th { font-family: var(--font-body); font-weight: 700; color: var(--muted); white-space: nowrap; background: var(--bg); }
+.table-scroll tbody tr:last-child td { border-bottom: 0; }
+.table-scroll td.num, .table-scroll th.num { text-align: right; font-family: var(--font-num); white-space: nowrap; }
+.table-scroll td strong { white-space: nowrap; }
+.legend { color: var(--muted); font-size: .85rem; margin: 8px 0 0; }
+.questions { padding-left: 1.2em; }
+.questions li { margin-bottom: 1em; }
+
 footer.wrap { margin-top: 64px; padding-top: 24px; padding-bottom: 40px; border-top: 1px solid var(--border); color: var(--muted); }
 footer p { margin: .25em 0; }
 .small { font-size: .85rem; }
@@ -172,6 +205,12 @@ footer p { margin: .25em 0; }
     <button type="button" id="next-theme" class="next" title="Next style (S)">Next ↻</button>
   </nav>
 
+  <nav class="tabs" aria-label="Pages">
+    <a href="#home" data-tab="home">Home</a>
+    <a href="#research" data-tab="research">Stock research</a>
+  </nav>
+
+  <div id="tab-home" class="tab-panel">
   <header class="hero">
     <div class="wrap">
       <p class="eyebrow">Hi, I'm</p>
@@ -248,6 +287,80 @@ footer p { margin: .25em 0; }
       </ul>
     </section>
   </main>
+  </div>
+
+  <main id="tab-research" class="tab-panel" hidden>
+    <section class="wrap research-head">
+      <p class="eyebrow">Research · October 2026</p>
+      <h1>Hunting for 100-baggers</h1>
+      <p class="lede">I screened about 35 US-listed small caps against Christopher Mayer's <em>100 Baggers</em> criteria, looking through the lenses of AI, health &amp; fitness, experiences, and the outdoors.</p>
+
+      <div class="callout">
+        <p><strong>Criteria:</strong> market cap under $2B · revenue growth over 15%/yr for 5 years and still over 15% · founder running it with insiders owning over 10% · gross margin over 40% and debt/equity under 0.5 · room for 20x revenue in 15 years · reasonable valuation.</p>
+        <p><strong>Headline:</strong> none pass all six with fully verified data. Four come close (DSP, PAYS, RDVT, KARO); the rest of the top 10 are flagged near-misses. All 8 outdoors names and all 7 experiences names failed.</p>
+        <p><strong>Caveats:</strong> the figures come from web-search results, not checked against filings; market caps are from Aug–Oct 2026; some founder statuses are unverified. This is a personal research screen, not investment advice.</p>
+      </div>
+    </section>
+
+    <section class="wrap wide">
+      <h2>The top 10 at a glance</h2>
+      <div class="table-scroll">
+        <table class="top10">
+          <thead>
+            <tr><th>#</th><th>Company</th><th>What it does</th><th>Mkt cap</th><th>5-yr CAGR</th><th>Latest YoY</th><th>Gross margin</th><th>Insider %</th><th>Debt/Eq</th><th>Founder CEO?</th><th class="num">Score</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td><strong>DSP</strong> Viant</td><td>AI-driven ad buying for connected TV</td><td>$790M ✅</td><td>15.8% ⚠️</td><td>+34% ✅</td><td>45.8% ✅</td><td>71.5% ✅</td><td>0.0 ✅</td><td>⚠️ Vanderhook</td><td class="num">45</td></tr>
+            <tr><td>2</td><td><strong>PAYS</strong> Paysign</td><td>Prepaid cards for plasma payouts &amp; pharma copays</td><td>$728–779M ✅</td><td>27.7% ✅</td><td>+48% ✅</td><td>63% ✅</td><td>~16.5% ✅</td><td>0.23 ✅</td><td>⚠️ Newcomer</td><td class="num">43</td></tr>
+            <tr><td>3</td><td><strong>RDVT</strong> Red Violet</td><td>Identity &amp; data analytics</td><td>$1.20B ✅</td><td>21.2% ✅</td><td>+23% ✅</td><td>~76% ✅</td><td>8.9–23.7% ⚠️</td><td>~0 ✅</td><td>✅ Dubner</td><td class="num">41</td></tr>
+            <tr><td>4</td><td><strong>CSTL</strong> Castle Bio</td><td>Skin &amp; GI cancer risk tests</td><td>$1.02B ✅</td><td>40.6% ✅</td><td>+20% ✅</td><td>69–75% ✅</td><td>2–6.5% ❌</td><td>0.02 ✅</td><td>⚠️ Maetzold</td><td class="num">41</td></tr>
+            <tr><td>5</td><td><strong>OMDA</strong> Omada</td><td>Virtual chronic care &amp; GLP-1 companion</td><td>$1.31B ✅</td><td>45% (2-yr) ⚠️</td><td>+43% ✅</td><td>66–73% ✅</td><td>&lt;1% ❌</td><td>0 ✅</td><td>❌ CEO change 1/1/27</td><td class="num">41</td></tr>
+            <tr><td>6</td><td><strong>KARO</strong> Karooooo</td><td>Fleet-tracking subscriptions</td><td>$1.97–2.07B ⚠️</td><td>19.1% (ZAR) ✅</td><td>+22% ✅</td><td>73% (subs) ⚠️</td><td>74% ✅</td><td>unverified ⚠️</td><td>✅ Calisto</td><td class="num">39</td></tr>
+            <tr><td>7</td><td><strong>AMPL</strong> Amplitude</td><td>Product analytics + AI agents</td><td>$1.91B ⚠️</td><td>27.3% ✅</td><td>+21% ⚠️</td><td>74% ✅</td><td>~7–8% ❌</td><td>~0 ✅</td><td>⚠️ Skates</td><td class="num">37</td></tr>
+            <tr><td>8</td><td><strong>ODD</strong> Oddity</td><td>Online beauty &amp; wellness brands</td><td>~$0.75–1.1B ✅</td><td>48.9% ✅</td><td>−25% ❌</td><td>69–73% ✅</td><td>~24% ✅</td><td>~2.0x ❌</td><td>✅ Holtzman</td><td class="num">37</td></tr>
+            <tr><td>9</td><td><strong>INOD</strong> Innodata</td><td>AI training data for big AI labs</td><td>$1.8–2.2B ⚠️</td><td>34.0% ✅</td><td>+58% ✅</td><td>39.5% ❌</td><td>4–12% ⚠️</td><td>~0 ✅</td><td>❌ CEO handover</td><td class="num">36</td></tr>
+            <tr><td>10</td><td><strong>KRUS</strong> Kura Sushi</td><td>Conveyor-belt sushi restaurants</td><td>~$600–700M ✅</td><td>28% (FY19–25) ✅</td><td>+16% ⚠️</td><td>18% (restaurant) ❌</td><td>~8% (parent) ❌</td><td>0 ✅</td><td>❌ Parent-controlled</td><td class="num">30</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="legend">✅ passes · ⚠️ borderline or unverified · ❌ fails. Score is out of 60 (six criteria, 1–10 each).</p>
+
+      <h2>Scores by criterion</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Company</th><th class="num">Cap</th><th class="num">Growth</th><th class="num">Founder / insider</th><th class="num">GM / debt</th><th class="num">TAM</th><th class="num">Valuation</th><th class="num">Total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>DSP</strong></td><td class="num">8</td><td class="num">7</td><td class="num">8</td><td class="num">7</td><td class="num">7</td><td class="num">8</td><td class="num"><strong>45</strong></td></tr>
+            <tr><td><strong>PAYS</strong></td><td class="num">8</td><td class="num">9</td><td class="num">6</td><td class="num">8</td><td class="num">5</td><td class="num">7</td><td class="num"><strong>43</strong></td></tr>
+            <tr><td><strong>RDVT</strong></td><td class="num">6</td><td class="num">8</td><td class="num">6</td><td class="num">10</td><td class="num">6</td><td class="num">5</td><td class="num"><strong>41</strong></td></tr>
+            <tr><td><strong>CSTL</strong></td><td class="num">6</td><td class="num">8</td><td class="num">4</td><td class="num">9</td><td class="num">6</td><td class="num">8</td><td class="num"><strong>41</strong></td></tr>
+            <tr><td><strong>OMDA</strong></td><td class="num">6</td><td class="num">8</td><td class="num">2</td><td class="num">9</td><td class="num">8</td><td class="num">8</td><td class="num"><strong>41</strong></td></tr>
+            <tr><td><strong>KARO</strong></td><td class="num">3</td><td class="num">7</td><td class="num">10</td><td class="num">7</td><td class="num">6</td><td class="num">6</td><td class="num"><strong>39</strong></td></tr>
+            <tr><td><strong>AMPL</strong></td><td class="num">4</td><td class="num">7</td><td class="num">5</td><td class="num">9</td><td class="num">6</td><td class="num">6</td><td class="num"><strong>37</strong></td></tr>
+            <tr><td><strong>ODD</strong></td><td class="num">7</td><td class="num">3</td><td class="num">9</td><td class="num">5</td><td class="num">6</td><td class="num">7</td><td class="num"><strong>37</strong></td></tr>
+            <tr><td><strong>INOD</strong></td><td class="num">4</td><td class="num">10</td><td class="num">3</td><td class="num">6</td><td class="num">7</td><td class="num">6</td><td class="num"><strong>36</strong></td></tr>
+            <tr><td><strong>KRUS</strong></td><td class="num">8</td><td class="num">6</td><td class="num">3</td><td class="num">3</td><td class="num">4</td><td class="num">6</td><td class="num"><strong>30</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Three to dig into, and the one question for each</h2>
+      <ol class="questions">
+        <li><strong>Viant (DSP):</strong> can it hold a gross margin of about 45% or more while gaining connected-TV share, as Amazon and The Trade Desk compete on fees?</li>
+        <li><strong>Paysign (PAYS):</strong> how much revenue comes from the biggest plasma and pharma clients, and when do those contracts renew?</li>
+        <li><strong>Omada (OMDA):</strong> as GLP-1 drugs spread, are employers and health plans renewing and expanding Omada, or replacing it with bundled programs?</li>
+      </ol>
+
+      <h2>Themes that didn't make it</h2>
+      <p>Outdoors (Solo Brands, Clarus, Johnson Outdoors, Arhaus, XPEL and others) and experiences (Lindblad, Sweetgreen, Lucky Strike, Travelzoo, GEN) failed on low gross margins, heavy debt or lease liabilities, slowing growth, or no founder at the helm. Klook and Strava aren't public yet, and Hims &amp; Hers is well over $2B.</p>
+
+      <p class="project-links">
+        <a class="btn primary" href="https://github.com/nickkot/nickkotani/blob/main/research/100-bagger-screen-2026-10.md">Read the full report with sources</a>
+      </p>
+    </section>
+  </main>
 
   <footer class="wrap">
     <p><a href="https://www.linkedin.com/in/nicholas-kotani/" rel="me">LinkedIn</a> · <a href="https://the-box-score.com/">The Box Score</a></p>
@@ -280,6 +393,21 @@ footer p { margin: .25em 0; }
       document.addEventListener("keydown", function (e) {
         if ((e.key === "s" || e.key === "S") && !e.metaKey && !e.ctrlKey && !e.altKey) next();
       });
+      // Tabs: #research shows the research page; any other hash shows home.
+      var tabs = { home: document.getElementById("tab-home"), research: document.getElementById("tab-research") };
+      function showTab() {
+        var current = location.hash === "#research" ? "research" : "home";
+        Object.keys(tabs).forEach(function (k) { tabs[k].hidden = k !== current; });
+        document.querySelectorAll("[data-tab]").forEach(function (a) {
+          if (a.dataset.tab === current) a.setAttribute("aria-current", "page");
+          else a.removeAttribute("aria-current");
+        });
+        var target = location.hash && document.getElementById(location.hash.slice(1));
+        if (current === "research" || location.hash === "#home") window.scrollTo(0, 0);
+        else if (target) target.scrollIntoView();
+      }
+      window.addEventListener("hashchange", showTab);
+      showTab();
       document.getElementById("year").textContent = new Date().getFullYear();
     })();
   </script>
